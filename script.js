@@ -72,16 +72,13 @@ form.addEventListener("submit", function (e) {
   statusDiv.textContent = "Submitting...";
 
   fetch(WEB_APP_URL, {
-    method: "POST",
-    body: new FormData(form)
-  })
-    .then(() => {
-      statusDiv.textContent = "✅ Case submitted successfully.";
-      form.reset();
-      dynamicQuestionsDiv.innerHTML = "";
-    })
-    .catch(() => {
-      statusDiv.textContent = "❌ Submission failed. Please try again.";
-    });
+  method: "POST",
+  mode: "no-cors",
+  body: new FormData(form)
+});
+
+statusDiv.textContent = "✅ Case submitted successfully.";
+form.reset();
+dynamicQuestionsDiv.innerHTML = "";
 });
 

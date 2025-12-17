@@ -1,1 +1,52 @@
-<!-- placeholder -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Start Your Case</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Start Your Case</h1>
+
+    <form id="intakeForm">
+
+      <label>Full Name</label>
+      <input type="text" name="fullName" required>
+
+      <label>Phone Number</label>
+      <input type="tel" name="phoneNumber" required>
+
+      <label>Email Address</label>
+      <input type="email" name="emailAddress" required>
+
+      <label>Service Type</label>
+      <select name="serviceType" id="serviceType" required>
+        <option value="">Select a service</option>
+        <option value="Cash Offer">Cash Offer</option>
+        <option value="Creative Finance">Creative Finance</option>
+        <option value="Surplus Funds">Surplus Funds</option>
+        <option value="Probate">Probate</option>
+        <option value="Mortgage Takeover">Mortgage Takeover</option>
+      </select>
+
+      <label>Property Address (the property involved in this case — NOT your mailing address)</label>
+      <input type="text" name="propertyAddress" required>
+
+      <label>County & State of the Property (if applicable)</label>
+      <input type="text" name="countyState">
+
+      <!-- Dynamic Questions -->
+      <div id="dynamicQuestions"></div>
+
+      <button type="submit">Submit Case</button>
+
+    </form>
+
+    <div id="status"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
